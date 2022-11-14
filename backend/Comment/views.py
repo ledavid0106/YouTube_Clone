@@ -9,13 +9,12 @@ from .serializers import CommentSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def comment_list(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    if request.method == 'GET':
-        serializer = CommentSerializer(comment)
+def comment_list(request, video_id):
+    if request.method == "GET":
+        comments = Comment.objects.all().filter(video_id=video_id)
+        serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
-
-
+        
 @api_view(['POST', 'PUT'])
 @permission_classes([IsAuthenticated])
 def user_comment(request):
