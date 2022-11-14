@@ -14,3 +14,14 @@ def comment_list(request, pk):
     if request.method == 'GET':
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def user_comment(request):
+
+    if request.method == 'POST':
+        serializer = CommentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status = status.HTTP_201_CREATED)
