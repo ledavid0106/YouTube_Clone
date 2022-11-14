@@ -16,9 +16,10 @@ def comment_list(request, pk):
         return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['POST', 'PUT'])
 @permission_classes([IsAuthenticated])
 def user_comment(request):
+    comment=get_object_or_404(Comment)
 
     if request.method == 'POST':
         serializer = CommentSerializer(data=request.data)
@@ -26,3 +27,9 @@ def user_comment(request):
             serializer.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'PUT':
+        serializer = CommentSerializer(comment, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
