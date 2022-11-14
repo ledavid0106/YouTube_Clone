@@ -15,8 +15,6 @@ def comment_list(request, pk):
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
 
-
-<<<<<<< HEAD
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def user_comment(request):
@@ -26,5 +24,3 @@ def user_comment(request):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status = status.HTTP_201_CREATED)
-=======
->>>>>>> 54d84ad013682b6bc8dcd087c18c9a6a615923bb
