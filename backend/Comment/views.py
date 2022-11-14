@@ -14,3 +14,5 @@ def comment_list(request, pk):
     if request.method == 'GET':
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
+
+
