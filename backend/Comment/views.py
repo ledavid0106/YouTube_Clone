@@ -28,11 +28,13 @@ def user_comment(request):
         serializer.save()
         return Response(serializer.data, status = status.HTTP_201_CREATED)
 
+@api_view(["PUT"])
+@permission_classes([IsAuthenticated])
+def edit_comment(request, comment_id): 
+    comments = get_object_or_404(Comment, id=comment_id)
+    if request.method == 'PUT':
+        serializer = CommentSerializer(comments, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
 
-
-    # elif request.method == 'PUT':
-    #     serializer = CommentSerializer(comments, data=request.data)
-    #     if serializer.is_valid(raise_exception=True):
-    #         serializer.save()
-    #         return Response(serializer.data)
-    #     return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
