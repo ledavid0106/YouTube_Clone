@@ -19,4 +19,8 @@ def reply_list(request, pk):
         replies = Reply.objects.all().filter(comment=comment)
         serializer = ReplySerializer(replies, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-        
+    elif request.method == "POST":
+        serializer = ReplySerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+        return Response(serializer.errors, status=status.HTTP_201_CREATED)
