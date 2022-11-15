@@ -7,7 +7,7 @@ from .models import Reply
 from rest_framework import status
 from .serializers import ReplySerializer
 from django.shortcuts import render
-from comment.models import Comment
+from comments.models import Comment
 # Create your views here.
 
 

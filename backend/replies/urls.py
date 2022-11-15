@@ -1,5 +1,5 @@
 from django.urls import path, include
-from reply import views
+from replies import views
 
 # <<<<<<<<<<<<<<<<< EXAMPLE FOR STARTER CODE USE <<<<<<<<<<<<<<<<<
 

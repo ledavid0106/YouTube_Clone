@@ -15,10 +15,6 @@ def comment_list(request, video_id):
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
         
-
-
-
-        
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def user_comment(request):
