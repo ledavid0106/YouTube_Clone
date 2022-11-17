@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SearchResults = ({views, description, timestamp, channel, title, image}) => {
+const SearchResultVideo = ({views, description, timestamp, channel, title, image}) => {
     return (
         <div className='SearchResults'>
           <img src={image} alt="" />
@@ -18,4 +18,4 @@ const SearchResults = ({views, description, timestamp, channel, title, image}) =
     )
 }
 
-export default SearchResults;
+export default SearchResultVideo;
