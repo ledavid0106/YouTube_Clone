@@ -16,7 +16,6 @@ import Footer from "./components/Footer/Footer";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 import SearchPage from "./components/SearchSection/SearchPage/SearchPage";
-import RecommendedVideos from "./components/VideoSection/RecommendedVideos/RecommendedVideos";
 
 
 function App() {
@@ -24,7 +23,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<RecommendedVideos />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="" element={<SearchPage />} />
