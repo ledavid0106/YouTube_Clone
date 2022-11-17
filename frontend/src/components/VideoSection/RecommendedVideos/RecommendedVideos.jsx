@@ -15,7 +15,7 @@ const RecommendedVideos = () => {
 
     useEffect(() => {
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=9&regionCode=US&key=${key}`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=US&key=${key}`)
         .then(response => {
           createVideoCards(response.data.items);
         })
