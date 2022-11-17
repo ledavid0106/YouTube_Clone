@@ -1,7 +1,7 @@
 // General Imports
 import { Route, Routes} from "react-router-dom";
 import "./App.css";
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
