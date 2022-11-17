@@ -5,7 +5,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
 import VideoInfo from '../VideoInfo/VideoInfo';
 import Video from '../Video/Video';
-import RecommendedVideos from '../RecommendedVideos/RecommendedVideos';
+import RelatedVideos from '../RelatedVideos/RelatedVideos';
 
 const VideoPlayer = () => {
     let { videoId } = useParams();
@@ -86,7 +86,7 @@ const VideoPlayer = () => {
                 </div>
             </div>
             <div className='videoplayer__suggested'>
-                <RecommendedVideos />
+                <RelatedVideos />
             </div>
         </div>
     )
