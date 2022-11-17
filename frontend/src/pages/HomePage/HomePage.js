@@ -1,8 +1,12 @@
+import SearchBar from "../../components/SearchSection/SearchBar/SearchBar";
 import RecommendedVideos from "../../components/VideoSection/RecommendedVideos/RecommendedVideos";
 
 const HomePage = () => {
   return (
-    <RecommendedVideos/>
+    <div>
+      <SearchBar/>
+      <RecommendedVideos/>
+    </div>
   )
 };
 
