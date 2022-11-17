@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-const SearchBar = ( {setQuery, getQuery}) => {
+const SearchBar = ( {setQuery}) => {
     const [tempQuery, setTempQuery] = useState("");
 
     function handleSubmit(event) {
@@ -16,7 +16,7 @@ const SearchBar = ( {setQuery, getQuery}) => {
                 placeholder="Search here..."
                 size='100'
                 value={tempQuery}
-                onChange={(event) => setTempQuery(event.target.value)}
+                onSubmit={(event) => setTempQuery(event.target.value)}
             />
             <button>GO</button>
         </form>

@@ -5,7 +5,7 @@ import SearchResults from "../SearchResults/SearchResults";
 
 
 const SearchPage = ({}) => {
-    const [query, setQuery] = useState("")
+    const [query, setQuery] = useState("dogs")
     const [searchResults, setSearchResults] = useState({});
     const key = "AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4"
 

@@ -8,7 +8,7 @@ const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
-  const [user, token] = useAuth();
+  const [user, token] = useAuth("AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4");
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const HomePage = () => {
           </p>
         ))}
     </div>
-  );
+  )
 };
 
 export default HomePage;
