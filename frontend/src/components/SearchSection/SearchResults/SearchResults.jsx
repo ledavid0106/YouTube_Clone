@@ -1,11 +1,10 @@
-
+import { Link } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router';
 import axios from 'axios';
 import {DateTime} from 'luxon';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
-import SearchBar from "../SearchBar/SearchBar";
 import SearchResultVideo from '../SearchResultVideo/SearchResultVideo';
 
 
@@ -69,14 +68,16 @@ const SearchResults = (props) => {
     { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
     {videoRows.map(item => {
         return (
-                  <SearchResultVideo
-                    title={item.title}
-                    image={item.image}
-                    views={item.views}
-                    timestamp={item.timestamp}
-                    channel={item.channel}
-                    description={item.description}
-                  />
+            <Link key={item.videoId} to={`/video/${item.videoId}`}>
+              <SearchResultVideo
+                title={item.title}
+                image={item.image}
+                views={item.views}
+                timestamp={item.timestamp}
+                channel={item.channel}
+                description={item.description}
+              />
+            </Link>
         )})}
     </div>)
 }

@@ -2,7 +2,6 @@
 import { Route, Routes} from "react-router-dom";
 import "./App.css";
 import React, {useState, useEffect} from "react";
-import {BrowserRouter as Router} from 'react-router-dom';
 
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
@@ -16,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import VideoPage from "./pages/VideoPage/VideoPage";
 
 
 function App() {
@@ -27,8 +27,9 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/search/:searchQuery" element={<SearchPage />} />
+          <Route path="/video/:videoId" element={<VideoPage />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
