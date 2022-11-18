@@ -38,7 +38,7 @@ const SearchResults = (props) => {
         for (const video of videos) {
           const videoId = video.id.videoId;
           const response = await axios
-                                  .get(`https://www.googleapis.com/youtube/v3/videos?part=statistics%2C%20snippet&id=${videoId}&key=${key}`)
+                                  .get(`https://www.googleapis.com/youtube/v3/videos?part=statistics%2C%20snippet&id=${videoId}&key=${apikey}`)
           const views = response.data.items[0].statistics.viewCount;
           const snippet = video.snippet;
           const title = snippet.title;

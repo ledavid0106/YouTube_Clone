@@ -36,7 +36,7 @@ const VideoPlayer = () => {
         const stats = video.statistics;
         const channelId = snippet.channelId;
         const response = await axios
-                              .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=${channelId}&key=${key}`)
+                              .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=${channelId}&key=${apikey}`)
         
         const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
         const publishedDate = new Date(snippet.publishedAt).toLocaleDateString('en-GB', {  
