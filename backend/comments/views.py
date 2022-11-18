@@ -20,9 +20,9 @@ def comment_list(request, video_id):
 def user_comment(request):
     if request.method == 'POST':
         serializer = CommentSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status = status.HTTP_201_CREATED)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status = status.HTTP_201_CREATED)
 
 @api_view(["PUT"])
 @permission_classes([IsAuthenticated])
