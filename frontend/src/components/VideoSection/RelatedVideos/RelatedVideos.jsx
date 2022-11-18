@@ -7,6 +7,7 @@ import {DateTime} from 'luxon';
 import {useParams} from 'react-router';
 import RelatedVideoCard from './RelatedVideoCard';
 import apikey from "../../../key"
+import './RelatedVideos.css'
 
 
 const RelatedVideos = () => {
@@ -63,9 +64,9 @@ const RelatedVideos = () => {
     }
     return (
         
-        <div className='recommendedvideos'>
+        <div className='relatedvideos'>
             { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
-            <div className="recommendedvideos__videos">
+            <div className="relatedvideos__videos">
                 {
                   videoCards.map(item => {
                     console.log(item.videoId)

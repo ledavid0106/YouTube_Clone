@@ -1,0 +1,9 @@
+.recommendedvideos {
+    position: absolute;
+    width: 60%;
+    right: 20%;
+}
+
+.recommendedvideos__videos {
+    background-color: #055C9D;
+}

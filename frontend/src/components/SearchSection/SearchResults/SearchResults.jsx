@@ -7,6 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
 import SearchResultVideo from '../SearchResultVideo/SearchResultVideo';
 import apikey from '../../../key'
+import './SearchResults.css'
 
 
 const SearchResults = (props) => {

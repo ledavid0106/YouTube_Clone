@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchResultVideo.css'
 
 
 const SearchResultVideo = ({views, description, timestamp, channel, title, image}) => {

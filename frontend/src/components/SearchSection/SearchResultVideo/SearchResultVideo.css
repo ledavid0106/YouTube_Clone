@@ -1,0 +1,21 @@
+.SearchResults {
+    float: right;
+    width: 35%;
+    height: 25rem;
+    border: 3px solid blue;
+    text-align: center;
+    padding-top: 20px;
+    margin: 80px;
+    background-color: #055C9D;
+    color: aliceblue;
+    overflow: scroll;
+}
+
+.SearchResults::-webkit-scrollbar {
+    display: none;
+}
+
+.SearchResults:hover {
+    color: #FFD700;
+    cursor: pointer;
+}

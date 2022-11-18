@@ -1,0 +1,8 @@
+.videocard__image {
+    border: 3px solid blue;
+    float: left;
+}
+
+.videocard {
+    height: 230px;
+}

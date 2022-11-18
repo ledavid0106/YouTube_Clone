@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import {DateTime} from 'luxon';
 import VideoCard from './VideoCard';
 import apikey from '../../../key'
+import './RecommendedVideos.css'
 
 const RecommendedVideos = () => {
     

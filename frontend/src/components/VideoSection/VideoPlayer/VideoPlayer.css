@@ -1,0 +1,19 @@
+.videoplayer__videodetails{
+    width: 50%;
+    height: 40rem;
+}
+
+.videoplayer__videoinfo {
+    height: 17rem;
+    overflow: scroll;
+}
+
+.videoplayer__videoinfo::-webkit-scrollbar {
+    display: none;
+}
+
+.videoplayer {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+}

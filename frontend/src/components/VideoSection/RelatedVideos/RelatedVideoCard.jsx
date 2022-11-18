@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
+import './RelatedVideoCard.css'
 
 
 const RelatedVideoCard = ({image, title, channel, timestamp, channelImage}) => {
@@ -7,11 +8,6 @@ const RelatedVideoCard = ({image, title, channel, timestamp, channelImage}) => {
         <div className='videocard'>
           <img className='videocard__image' src={image} alt='' />
           <div className="videocard__info">
-            <Avatar 
-              className='videocard__avatar' 
-              alt={channel} 
-              src={channelImage} 
-            />
             <div className="videocard__text">
               <h4>{title}</h4>
               <p>{channel}</p>
