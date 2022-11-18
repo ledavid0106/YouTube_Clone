@@ -11,7 +11,6 @@ const CommentForm = ({getAllComments, videoId, token,user_id}) => {
 
     async function addComment () {
         let newComment = {
-            user: user_id,
             text: commentText,
             video_id: videoId,
             likes: 0,

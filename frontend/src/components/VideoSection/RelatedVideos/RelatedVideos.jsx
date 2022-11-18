@@ -17,6 +17,7 @@ const RelatedVideos = () => {
     let { videoId } = useParams();
 
     useEffect(() => {
+      
       axios
         .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${apikey}`)
         .then(response => {
@@ -26,7 +27,7 @@ const RelatedVideos = () => {
           console.log(error);
           setIsError(true);
         })
-    }, [])
+    }, [videoId])
 
     async function createVideoCards(videoItems) {
       let newVideoCards = [];
@@ -67,8 +68,10 @@ const RelatedVideos = () => {
             <div className="recommendedvideos__videos">
                 {
                   videoCards.map(item => {
+                    console.log(item.videoId)
                     return (
-                            <Link key={item.videoId} to={`/video/${item.videoId}`}>
+                        <Link key={item.videoId} to={`/video/${item.videoId}`}>
+                              
                               <RelatedVideoCard
                                 title={item.title}
                                 image={item.image}
