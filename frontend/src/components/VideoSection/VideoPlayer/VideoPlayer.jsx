@@ -6,10 +6,11 @@ import Alert from '@material-ui/lab/Alert';
 import VideoInfo from '../VideoInfo/VideoInfo';
 import Video from '../Video/Video';
 import RelatedVideos from '../RelatedVideos/RelatedVideos';
+import apikey from "../../../key"
 
 const VideoPlayer = () => {
     let { videoId } = useParams();
-    let key = "AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4"
+
 
     const [videoInfo, setVideoInfo] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ const VideoPlayer = () => {
         setVideoInfo([]);
         setIsLoading(true);
         axios
-          .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${videoId}&key=${key}`)
+          .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${videoId}&key=${apikey}`)
           .then(response => {
               createVideoInfo(response.data['items'][0]);
               setIsError(false);

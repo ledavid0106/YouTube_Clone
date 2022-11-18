@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import {DateTime} from 'luxon';
 import {useParams} from 'react-router';
 import RelatedVideoCard from './RelatedVideoCard';
-
+import apikey from "../../../key"
 
 
 const RelatedVideos = () => {
-    let key = "AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4"
+    
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
@@ -18,7 +18,7 @@ const RelatedVideos = () => {
 
     useEffect(() => {
       axios
-        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${key}`)
+        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${apikey}`)
         .then(response => {
           createVideoCards(response.data.items);
         })

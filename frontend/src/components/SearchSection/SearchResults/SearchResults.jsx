@@ -6,11 +6,11 @@ import {DateTime} from 'luxon';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
 import SearchResultVideo from '../SearchResultVideo/SearchResultVideo';
-
+import apikey from '../../../key'
 
 
 const SearchResults = (props) => {
-    let key = "AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4"
+
     let {searchQuery} = useParams();
     const [videoRows, setVideoRows] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +19,7 @@ const SearchResults = (props) => {
         useEffect(() => {
             setVideoRows([]);
             axios
-              .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&type=video&q=${searchQuery}&safeSearch=none&key=${key}`)
+              .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&type=video&q=${searchQuery}&safeSearch=none&key=${apikey}`)
               .then(response => {
                 createVideoRows(response.data['items']);
                 setIsError(false);

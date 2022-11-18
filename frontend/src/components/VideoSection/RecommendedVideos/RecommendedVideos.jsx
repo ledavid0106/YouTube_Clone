@@ -5,17 +5,17 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { Link } from 'react-router-dom';
 import {DateTime} from 'luxon';
 import VideoCard from './VideoCard';
-
+import apikey from '../../../key'
 
 const RecommendedVideos = () => {
-    let key = "AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4"
+    
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=US&key=${key}`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=US&key=${apikey}`)
         .then(response => {
           createVideoCards(response.data.items);
         })
