@@ -3,7 +3,7 @@ import axios from "axios";
 import {Form, FormLabel, FormControl, FormGroup, Button} from 'react-bootstrap'
 import Alert from '@material-ui/lab/Alert';
 import useAuth from "../../hooks/useAuth";
-
+import './CommentForm.css'
 
 
 const CommentForm = ({getAllComments, videoId, token,user_id}) => {
@@ -40,16 +40,16 @@ const CommentForm = ({getAllComments, videoId, token,user_id}) => {
     return ( 
         <Form onSubmit={handleSubmit}>
             <FormGroup>
-                <FormLabel>Comment?</FormLabel>
+                <FormLabel className="comment_form">Comment?</FormLabel>
                 <FormControl
                     placeholder="...Comment?"
                     type="text"
                     onChange={(event)=> setCommentText(event.target.value)}
                     value={commentText}
-                    className="mb-1 bg-body rounded"
+                    className="comment_input"
                 />
             </FormGroup>
-            <Button type="Submit">Submit Comment</Button>
+            <Button className="submit" type="Submit">Submit Comment</Button>
         </Form>
      );
 }

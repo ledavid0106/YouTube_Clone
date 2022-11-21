@@ -6,6 +6,7 @@
 .videoplayer__videoinfo {
     height: 17rem;
     overflow: scroll;
+    color: aliceblue;
 }
 
 .videoplayer__videoinfo::-webkit-scrollbar {

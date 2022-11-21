@@ -1,0 +1,21 @@
+.comment_form {
+    position: absolute;
+    top: 134%;
+    color: #FFD700;
+    font-size: x-large;
+}
+
+.comment_input {
+    position: absolute;
+    top: 140%;
+    left: 0%;
+    font-size: x-large;
+    padding: 10px;
+    width: 50%;
+}
+
+.submit {
+    position: absolute;
+    top: 150%;
+    left: 44.3%;
+}
