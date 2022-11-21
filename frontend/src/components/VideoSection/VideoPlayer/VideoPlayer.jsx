@@ -7,6 +7,7 @@ import VideoInfo from '../VideoInfo/VideoInfo';
 import Video from '../Video/Video';
 import RelatedVideos from '../RelatedVideos/RelatedVideos';
 import apikey from "../../../key"
+import CommentList from '../../CommentSection/CommentList/CommentList';
 
 const VideoPlayer = () => {
     let { videoId } = useParams();
