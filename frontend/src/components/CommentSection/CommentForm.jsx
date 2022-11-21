@@ -49,7 +49,7 @@ const CommentForm = ({getAllComments, videoId, token,user_id}) => {
                     className="comment_input"
                 />
             </FormGroup>
-            <Button className="submit" type="Submit">Submit Comment</Button>
+            <Button className="submit" type="Submit">POST</Button>
         </Form>
      );
 }
