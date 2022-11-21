@@ -1,6 +1,5 @@
 
 
-
 const Comment = ({comment, user}) => {
     console.log(comment)
 

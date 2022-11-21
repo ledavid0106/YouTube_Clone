@@ -4,6 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 import CommentForm from "../CommentForm";
 import Comment from "./Comments/Comments";
 import { Link } from "react-router-dom";
+import './CommentList.css'
 
 
 const CommentList = ({videoId, user_id}) => {
@@ -26,11 +27,14 @@ const CommentList = ({videoId, user_id}) => {
                 videoId={videoId}
                 user_id={user_id}
             />
-            {comments.map((comment, index)=>{
-                return (
-                    <Comment comment={comment} key={index} user={user}/>
-                )
-            })}
+            <div className="user_comments">
+                {comments.map((comment, index)=>{
+                    return (
+                        <Comment comment={comment} key={index} user={user}/>
+                    )
+                })}
+            </div>
+            
         </div>
      ) : (
         <div>
