@@ -21,8 +21,12 @@ const LoginPage = () => {
   return (
     <div className="container">
       <form className="form" onSubmit={handleSubmit}>
+        <div className="login_hdr">
+          LOGIN
+        </div>
+
         <label>
-          Username:{" "}
+          USERNAME:{" "}
           <input
             type="text"
             name="username"
@@ -31,7 +35,7 @@ const LoginPage = () => {
           />
         </label>
         <label>
-          Password:{" "}
+          PASSWORD:{" "}
           <input
             type="text"
             name="password"
@@ -43,7 +47,7 @@ const LoginPage = () => {
           <p className="error">Login failed, incorrect credentials!</p>
         ) : null}
         <Link to="/register">Click to register!</Link>
-        <button>Login!</button>
+        <button className="login">Login!</button>
       </form>
     </div>
   );

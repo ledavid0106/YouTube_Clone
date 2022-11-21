@@ -1,0 +1,8 @@
+.register_hdr {
+    width: 100%;
+    text-align: justify;
+    font-size: x-large;
+    background-color: #0E86D4;
+    padding: 20px;
+    color: aliceblue;
+}

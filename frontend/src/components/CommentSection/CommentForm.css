@@ -17,6 +17,11 @@
 .submit {
     position: absolute;
     top: 150%;
-    left: 46.5%;
+    left: 46.8%;
 }
 
+button {
+    background-color: aliceblue;
+    color: black;
+    border: black;
+}
