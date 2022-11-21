@@ -1,4 +1,4 @@
-let apikey ='AIzaSyAO9Z7KcLxWLUcsa-57t_Os6ByiMtEKQLo'
+let apikey ='AIzaSyA2Lt0QJgXTENAsG0hmS4r3kmUDqdSBxK4'
 
 
 export default apikey;

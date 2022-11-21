@@ -21,6 +21,6 @@ def reply_list(request, pk):
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == "POST":
         serializer = ReplySerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(user=request.user)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
