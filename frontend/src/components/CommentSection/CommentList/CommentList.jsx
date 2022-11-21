@@ -3,6 +3,7 @@ import axios from "axios";
 import useAuth from "../../../hooks/useAuth";
 import CommentForm from "../CommentForm";
 import Comment from "./Comments/Comments";
+import { Link } from "react-router-dom";
 
 
 const CommentList = ({videoId, user_id}) => {
@@ -17,7 +18,7 @@ const CommentList = ({videoId, user_id}) => {
         getAllComments()
     }, [comments.length, videoId])
 
-    return ( 
+    return user ? ( 
         <div>
             <CommentForm
                 getAllComments={getAllComments}
@@ -31,7 +32,18 @@ const CommentList = ({videoId, user_id}) => {
                 )
             })}
         </div>
-     );
+     ) : (
+        <div>
+            <h4>
+                <Link to="/login">Login</Link> or <Link to="/register">Register</Link> to comment.
+            </h4>
+                        {comments.map((comment, index)=>{
+                return (
+                    <Comment comment={comment} key={index} user={user}/>
+                )
+            })}
+        </div>
+     )
 }
  
 export default CommentList;
