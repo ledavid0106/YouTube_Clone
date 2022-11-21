@@ -3,3 +3,12 @@
     color: #FFD700;
     cursor: pointer;
 }
+
+.header__searchbutton {
+    position: absolute;
+    color: aliceblue;
+}
+
+.header__searchbutton:hover {
+    color: #FFD700;
+}
