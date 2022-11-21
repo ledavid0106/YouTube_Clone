@@ -8,6 +8,11 @@
     margin: 80px;
     background-color: #055C9D;
     color: aliceblue;
+    overflow: scroll;
+}
+
+.videocard::-webkit-scrollbar {
+    display: none;
 }
 
 .videocard__avatar {
