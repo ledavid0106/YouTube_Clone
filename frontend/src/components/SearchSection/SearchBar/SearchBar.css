@@ -2,6 +2,8 @@
     text-align: center;
     color: #FFD700;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .header__searchbutton {
