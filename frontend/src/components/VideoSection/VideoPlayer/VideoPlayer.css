@@ -1,10 +1,10 @@
 .videoplayer__videodetails{
     width: 50%;
-    height: 40rem;
+    height: 45rem;
 }
 
 .videoplayer__videoinfo {
-    height: 17rem;
+    height: 20rem;
     overflow: scroll;
     color: aliceblue;
 }

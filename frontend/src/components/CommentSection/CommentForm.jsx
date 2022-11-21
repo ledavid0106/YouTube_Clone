@@ -40,7 +40,7 @@ const CommentForm = ({getAllComments, videoId, token,user_id}) => {
     return ( 
         <Form onSubmit={handleSubmit}>
             <FormGroup>
-                <FormLabel className="comment_form">Comment?</FormLabel>
+                <FormLabel className="comment">Comment?</FormLabel>
                 <FormControl
                     placeholder="...Comment?"
                     type="text"
@@ -49,6 +49,7 @@ const CommentForm = ({getAllComments, videoId, token,user_id}) => {
                     className="comment_input"
                 />
             </FormGroup>
+            
             <Button className="submit" type="Submit">POST</Button>
         </Form>
      );

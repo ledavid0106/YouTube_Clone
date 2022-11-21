@@ -1,6 +1,5 @@
 import React from 'react';
 import { Avatar} from '@material-ui/core';
-import "./VideoInfo.css"
 
 
 const VideoInfo = ({title, description, publishedDate, channelTitle, channelImage, viewCount, likeCount, dislikeCount}) => {

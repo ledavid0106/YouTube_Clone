@@ -38,14 +38,18 @@ const CommentList = ({videoId, user_id}) => {
         </div>
      ) : (
         <div>
-            <h4>
+            <h4 className="no_user" >
                 <Link to="/login">Login</Link> or <Link to="/register">Register</Link> to comment.
             </h4>
-                        {comments.map((comment, index)=>{
+
+            <div className="user_comments">
+                {comments.map((comment, index)=>{
                 return (
                     <Comment comment={comment} key={index} user={user}/>
                 )
             })}
+            </div>
+                        
         </div>
      )
 }

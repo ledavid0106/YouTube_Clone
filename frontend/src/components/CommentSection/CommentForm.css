@@ -1,4 +1,4 @@
-.comment_form {
+.comment {
     position: absolute;
     top: 134%;
     color: #FFD700;
@@ -17,6 +17,5 @@
 .submit {
     position: absolute;
     top: 150%;
-    left: 44.3%;
+    left: 46.5%;
 }
-
