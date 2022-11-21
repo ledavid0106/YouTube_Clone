@@ -80,7 +80,7 @@ const VideoPlayer = () => {
                 </div>
                 <div className='videoplayer__videoinfo'>
                     {!isLoading ? <VideoInfo
-                                    title={videoInfo.snippet}
+                                    title={videoInfo.title}
                                     description={videoInfo.description}
                                     publishedDate={videoInfo.publishedDate}
                                     channelTitle={videoInfo.channelTitle}
