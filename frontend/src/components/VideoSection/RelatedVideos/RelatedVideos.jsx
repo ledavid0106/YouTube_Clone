@@ -64,14 +64,14 @@ const RelatedVideos = () => {
     }
     return (
         
-        <div className='relatedvideos'>
+        <div >
             { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
             <div className="relatedvideos__videos">
                 {
                   videoCards.map(item => {
                     console.log(item.videoId)
                     return (
-                        <Link key={item.videoId} to={`/video/${item.videoId}`}>
+                        <Link to={`/video/${item.videoId.videoId}`}>
                               
                               <RelatedVideoCard
                                 title={item.title}
