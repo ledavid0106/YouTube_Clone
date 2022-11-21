@@ -29,7 +29,7 @@ function App() {
           <Route path="/search/:searchQuery" element={<SearchPage />} />
           <Route path="/video/:videoId" element={<VideoPage />} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
